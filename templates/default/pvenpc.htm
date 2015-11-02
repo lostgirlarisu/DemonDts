@@ -1,0 +1,40 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+{template header}
+<br><br><br>
+<center>
+<div style="width:80%; text-align:left;">
+<p>以下是和PVE相关的NPC，这些NPC在正常游戏中不会接触到，但是是达成其他结局所必需的。</p>
+<p>下面这些NPC坐镇于英灵殿。</p>
+<p><span class="lime">天神NPC 简介</span>：</p>
+天神称号授予对ACFUN大逃杀的创造和发展有里程碑式贡献的人物。目前只有冴月麟和四面两人。<br>
+虽然理论上还应该有初七等人，但是由于GM的偷懒并没有加入。该等级的NPC对玩家基本就是<span class="yellow">一击即死</span>。<br>
+但是因为没有<span class="yellow">伤害制御和强袭姿态</span>，威胁实际上不如武神。 <br></p>
+<br>
+<!--{loop $ty5 $vkind $kind}-->
+{template npcinfohelp}
+<!--{/loop}-->
+<br>
+<p><span class="lime">武神NPC 简介</span>：</p>
+武神称号授予参与过ACFUN大逃杀开发工作的人员。武神装备有接近10000总防御的防具，拥有很高的基础攻防，并各有特色。<br>
+武神统一拥有<span class="yellow">“伤害制御”</span>属性，<span class="lime">有90%的几率把受到的伤害压缩到2000点</span>。<br>
+由於大多数武神拥有<span class="yellow">“强袭姿态”</span>，先攻率远高于其他NPC，是进军英灵殿玩家的最大威胁。<br></p>
+<br>
+<!--{loop $ty6 $vkind $kind}-->
+{template npcinfohelp}
+<!--{/loop}-->
+<br> 
+<p>英雄模式NPC简介：</p>
+<p>使用红暮掉落的按钮即可召唤出它们。</p>
+<!--{loop $ty8 $vkind $kind}-->
+{template npcinfohelp}
+<!--{/loop}-->
+</div>
+</center>
+<form method="post" name="backindex" action="help.php"><input
+	type="submit" name="enter" value="返回帮助页面"></form>
+
+{template footer}
+

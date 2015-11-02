@@ -1,0 +1,21 @@
+{template header}
+<div class="subtitle" align="center">{lang valid}</div>
+
+<p><img border="0" src="img/i_hayashida.gif" style="align:center"></p>
+
+<p align="center">
+	“你就是今天预定到来的转学生？<br />
+	“我是你的班主任——任林田。<br />
+	“嘿嘿，你很懂挑学校嘛！<br />
+	“无论如何先填好你的资料吧。”<br /></p>
+
+	<form method="post"  action="valid.php" name="valid">
+		<input type="hidden" name="mode" value="enter"> {lang name} : $username <br />
+		{template usergdicon}<br />
+		{template userwords}<br />
+
+		<input type="submit" name="enter" value="{lang submit}">
+		<input type="reset" name="reset" value="{lang reset}">
+	</form>
+	<br />
+{template footer}

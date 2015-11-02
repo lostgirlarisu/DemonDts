@@ -1,0 +1,46 @@
+{template header}
+<center>
+<div>
+<form method="post" id="gamecmd" name="gamecmd" style="margin: 0px" >
+<div>
+<input type="hidden" id="mode" name="mode" value="team">
+<input type="hidden" id="command" name="command">
+<br><br>
+<font size="4">本局游戏为团战模式，你必须选择以下选项之一：</font><br><br>
+<div id="log">$log</div><br>
+<table>
+<tr>
+<td width=250px align="left" valign="top">
+<font size="5">不加入任何队伍。</font><br>
+<input type="button" value="不加入任何队伍" onclick="$('command').value='noteam';postCmd('gamecmd','command.php');">
+<br>你依然可以选择不加入任何队伍，单枪匹马作战。 <span class="red">但注意一旦选择了这个选项，你这局游戏将无法加入任何队伍。</span>
+</td>
+<td width=250px align="left" valign="top">
+<font size="5">创建/加入一个队伍。</font>
+<!--{if (!$always_randteam)}-->
+<div>队伍名称 : <input size="15" type="text" name="nteamID" maxlength="30"></div>
+<div>15个字以内。<div>
+<div>队伍密码 : <input size="15" type="text" name="nteamPass" maxlength="30"></div>
+<div>15个字以内。<div>
+<input type="button" class="cmdbutton" name="submit" value="创建/加入" onclick="$('command').value='teamc';postCmd('gamecmd','command.php');">
+<br>
+如果你之前已经与他人约好组队，请选择这个选项。队伍名不允许以“路人”开头，因为这是系统自动分配队伍的名字。
+<!--{else}-->
+<span>（本局游戏中被管理员禁用）<br>管理员设定了这局团战只能随机组队。<br>请选择其他选项。</span>
+<!--{/if}-->
+</td>
+<td>
+<td width=250px align="left" valign="top">
+<font size="5">由系统自动分配队伍。</font><br>
+<input type="button" value="系统自动分配队伍" onclick="$('command').value='teamautoc';postCmd('gamecmd','command.php');">
+<br>
+如果你没有与他人约好队伍，但希望参加团战，请选择这个选项。系统会将选择这个选项的玩家自动组队。
+<span class="yellow">如果你只是想观战，或者由于其他原因不准备认真玩，请不要选择这个选项！</span>
+</td>
+</tr>
+</table>
+</div>						
+</form>
+</div>
+</center>
+{template footer}

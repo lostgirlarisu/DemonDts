@@ -1,0 +1,24 @@
+<input type="hidden" name="mode" value="gem_expend">
+<input type="hidden" id="command" name="command" value="gemexpend">
+请选择你要吞噬的方块或魔法宝石：<br><br> 
+<!--{if $itms1 &&((strpos($itm1,'方块')!==false)||(strpos($itm1,'悲叹之种')!==false)||(strpos($itmk1,'GEM')!==false))}-->
+<input type="radio" id="1" name="blocks" value="$itm1"><a onclick=sl('1'); href="javascript:void(0);" >{$itm1}/{$itme1}/{$itms1}</a><br>
+<!--{/if}-->
+<!--{if $itms2 &&((strpos($itm2,'方块')!==false)||(strpos($itm2,'悲叹之种')!==false)||(strpos($itmk2,'GEM')!==false))}-->
+<input type="radio" id="2" name="blocks" value="$itm2"><a onclick=sl('2'); href="javascript:void(0);" >{$itm2}/{$itme2}/{$itms2}</a><br>
+<!--{/if}-->
+<!--{if $itms3 &&((strpos($itm3,'方块')!==false)||(strpos($itm3,'悲叹之种')!==false)||(strpos($itmk3,'GEM')!==false))}-->
+<input type="radio" id="3" name="blocks" value="$itm3"><a onclick=sl('3'); href="javascript:void(0);" >{$itm3}/{$itme3}/{$itms3}</a><br>
+<!--{/if}-->
+<!--{if $itms4 &&((strpos($itm4,'方块')!==false)||(strpos($itm4,'悲叹之种')!==false)||(strpos($itmk4,'GEM')!==false))}-->
+<input type="radio" id="4" name="blocks" value="$itm4"><a onclick=sl('4'); href="javascript:void(0);" >{$itm4}/{$itme4}/{$itms4}</a><br>
+<!--{/if}-->
+<!--{if $itms5 &&((strpos($itm5,'方块')!==false)||(strpos($itm5,'悲叹之种')!==false)||(strpos($itmk5,'GEM')!==false))}-->
+<input type="radio" id="5" name="blocks" value="$itm5"><a onclick=sl('5'); href="javascript:void(0);" >{$itm5}/{$itme5}/{$itms5}</a><br>
+<!--{/if}-->
+<!--{if $itms6 &&((strpos($itm6,'方块')!==false)||(strpos($itm6,'悲叹之种')!==false)||(strpos($itmk6,'GEM')!==false))}-->
+<input type="radio" id="6" name="blocks" value="$itm6"><a onclick=sl('6'); href="javascript:void(0);" >{$itm6}/{$itme6}/{$itms6}</a><br>
+<!--{/if}-->
+<br><br>
+<input type="button" class="cmdbutton" name="submit" value="吞噬" onclick="postCmd('gamecmd','command.php');this.disabled=true;">
+<input type="button" class="cmdbutton" name="submit" value="放弃" onclick="$('command').value='back'; postCmd('gamecmd','command.php');this.disabled=true;">

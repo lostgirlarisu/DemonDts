@@ -1,0 +1,1506 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+{template header}
+<div class="subtitle">ACFUN大逃杀电波服更新履历</div>
+<hr>
+<span class="yellow"><br>↓请自行选择是否打开BGM↓<br></span></td>
+<html>
+<body>
+<audio controls="controls">
+	<source src="/img/other/Saika.ogg" type="audio/ogg">
+</audio>
+</body>
+</html>
+<div align="left">
+<p><b style="FONT-SIZE: 120%; color: #98fb98"><span class="subtitle2">■新怒气系统</span></p></b>
+<span class="yellow"><b><p><span class="subtitle2">【新怒气系统】</span></p>
+<p>新怒气系统更新于2014年4月20日，由<span class="red">虚子</span>编写。<br>
+目前怒气的上限值为<span class="clan">100</span>点。<br>
+怒气的基础获得方式为：<br>
+<br>1、每次攻击可以获得<span class="yellow">1</span>点怒气，被攻击时可以获得<span class="clan">等级差/3</span>点怒气（最高15点）。<br>
+<span class="clan">重击辅助</span>可以提高怒气积累速度<span class="clan">30%</span>（取整）。<br></span>
+<span class="grey">例：小黑熊（6级）受到老黑熊（12级）攻击时，老黑熊获得1点怒气，小黑熊获得2点怒气。<br></span>
+<span class="yellow"><br>2、每次进行治疗类行动（治疗、睡眠及静养）时，每进行<span class="clan">x</span>秒，可以获得<span class="clan">x^2/40</span>点怒气。<br></span>
+<span class="grey">例：小黑熊静养了40秒，可以获得1600/40=40点怒气。<br></span>
+</p></b>
+<table cellSpacing=0 cellPadding=0>
+	<tr>
+		<td class="b1" height=20px >
+		<span>技能称号</span>
+		</td>
+		<td class="b1" >
+		<span>技能名称</span>
+		</td>
+		<td class="b1">
+		<span>技能类别</span>
+		</td>
+		<td class="b1" >
+		<span>获得等级</span>
+		</td>
+		<td class="b1" >
+		<span>技能效果</span>
+		</td>
+		<td class="b1" >
+		<span>技能消耗</span>
+		</td>
+	<tr>
+		<td class="b1" height=40px>
+		<span class="purple">黑衣组织</span>
+		</td>
+		<td class="b3">
+		<span class="clan">淬炼</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">3级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">使上毒的武器获得10%的额外效果与耐久。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<span class="purple">黑衣组织</span>
+		</td>
+		<td class="b3">
+		<span class="clan">渗透</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">7级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">攻击有防具部位时也有50%几率使其可能致伤，异常状态同理。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<span class="purple">黑衣组织</span>
+		</td>
+		<td class="b3">
+		<span class="clan">毒刺</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">12级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">使本次攻击附加猛毒状态，猛毒是中毒的上位状态，伤害双倍，无法用解毒药或全能的解除异常解除。<br>移动探索时有25%几率解除猛毒状态。</span>
+		</td>
+		<td class="b3">
+		<span class="red">40点怒气</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<span class="purple">黑衣组织</span>
+		</td>
+		<td class="b3">
+		<span class="clan">乱破</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">18级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">致伤率和属性致伤率都提高50%<br>使敌人的中毒状态变成猛毒。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<span class="purple">黑衣组织</span>
+		</td>
+		<td class="b3">
+		<span class="clan">暗杀</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">25级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">下一次攻击必中，使最终伤害变为(150+50x)%。(x为目标异常状态+受伤数，猛毒算2层)</span>
+		</td>
+		<td class="b3">
+		<span class="red">每局可使用1次</span>
+		</td>
+	</tr>
+	
+	
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FFDAB9">超能力者</span>
+		</td>
+		<td class="b3">
+		<span class="clan">必杀</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">3级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">使物理伤害变为200%。</span>
+		</td>
+		<td class="b3">
+		<span class="red">40点怒气</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FFDAB9">超能力者</span>
+		</td>
+		<td class="b3">
+		<span class="clan">护体</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">7级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">受到的属性伤害减少5-15%。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FFDAB9">超能力者</span>
+		</td>
+		<td class="b3">
+		<span class="clan">充能</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">12级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">进行一次普通攻击，获得100点怒气。</span>
+		</td>
+		<td class="b3">
+		<span class="red">每局可使用2次</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FFDAB9">超能力者</span>
+		</td>
+		<td class="b3">
+		<span class="clan">预感</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">18级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">受到的陷阱伤害减少0-30%。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FFDAB9">超能力者</span>
+		</td>
+		<td class="b3">
+		<span class="clan">心火</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">25级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">使造成的最终伤害变为200%。</span>
+		</td>
+		<td class="b3">
+		<span class="red">60点怒气</span>
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#CCCCCC">铁拳无敌</span>
+		</td>
+		<td class="b3">
+		<span class="clan">熟练</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">3级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">攻击时有35%几率获得2点殴熟，有10%几率获得3点殴熟，有5%几率获得4点殴熟。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#CCCCCC">铁拳无敌</span>
+		</td>
+		<td class="b3">
+		<span class="clan">乱击</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">7级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">附加1/5殴熟的伤害。</span>
+		</td>
+		<td class="b3">
+		<span class="red">50点怒气</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#CCCCCC">铁拳无敌</span>
+		</td>
+		<td class="b3">
+		<span class="clan">冷静</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">12级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">攻击时附加（100-怒气）的伤害。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#CCCCCC">铁拳无敌</span>
+		</td>
+		<td class="b3">
+		<span class="clan">连打</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">18级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">攻击时有30%几率发动连击效果。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#CCCCCC">铁拳无敌</span>
+		</td>
+		<td class="b3">
+		<span class="clan">决战</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">25级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">殴熟翻倍，但是每次移动和探索会减少5点殴熟。殴熟不会降到50点以下。</span>
+		</td>
+		<td class="b3">
+		<span class="red">每局可使用1次</span>
+		</td>
+	</tr>
+	
+	
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#6495ED">见敌必斩</span>
+		</td>
+		<td class="b3">
+		<span class="clan">电扇</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">3级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">对当前地图其他角色造成你武器效15-40%的伤害，最多800点，使用后武器损坏。</span>
+		</td>
+		<td class="b3">
+		<span class="red">每局可使用1次</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#6495ED">见敌必斩</span>
+		</td>
+		<td class="b3">
+		<span class="clan">业物</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">7级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">武器的耐久损耗几率-50%，造成的最终伤害+5%。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#6495ED">见敌必斩</span>
+		</td>
+		<td class="b3">
+		<span class="clan">烈风</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">12级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">无视对方防御属性，使造成的最终伤害变为130%。</span>
+		</td>
+		<td class="b3">
+		<span class="red">70点怒气</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#6495ED">见敌必斩</span>
+		</td>
+		<td class="b3">
+		<span class="clan">舞钢</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">18级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">使本次攻击的连击数+1-2次，命中率提高50%。</span>
+		</td>
+		<td class="b3">
+		<span class="red">70点怒气</span>
+		</td>
+	</tr>
+		<tr>
+		<td class="b1" height=40px>
+		<font color="#6495ED">见敌必斩</span>
+		</td>
+		<td class="b3">
+		<span class="clan">斩空</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">25级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">物理伤害+25%，射程+5（同重枪）。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#66CDAA">狙击鹰眼</span>
+		</td>
+		<td class="b3">
+		<span class="clan">瞄准</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">3级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">造成物理伤害变为120%，命中率提高25%。</span>
+		</td>
+		<td class="b3">
+		<span class="red">50点怒气</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#66CDAA">狙击鹰眼</span>
+		</td>
+		<td class="b3">
+		<span class="clan">掠夺</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">7级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">从尸体上获得的金钱提高(等级)%。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#66CDAA">狙击鹰眼</span>
+		</td>
+		<td class="b3">
+		<span class="clan">奔流</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">12级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">使用重枪和一发以外的枪械不消耗子弹。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#66CDAA">狙击鹰眼</span>
+		</td>
+		<td class="b3">
+		<span class="clan">咆哮</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">18级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">使属性伤害变为180%，对目标附加烧伤和所有部位受伤状态。</span>
+		</td>
+		<td class="b3">
+		<span class="red">100点怒气</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#66CDAA">狙击鹰眼</span>
+		</td>
+		<td class="b3">
+		<span class="clan">爆头</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">25级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">伤害超过85%目标当前生命值时自动将其秒杀。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	
+	
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FFD700">锡安成员</span>
+		</td>
+		<td class="b3">
+		<span class="clan">圣剑</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">3级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">使用殴系武器时有25%几率额外获得2点熟练。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FFD700">锡安成员</span>
+		</td>
+		<td class="b3">
+		<span class="clan">感电</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">7级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">攻击时附加(30+等级x2)点伤害。对麻痹的敌人则为附加(50+等级x3)点电击伤害。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FFD700">锡安成员</span>
+		</td>
+		<td class="b3">
+		<span class="clan">磁暴</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">12级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">电击属性伤害提高(武器熟练/2)%。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FFD700">锡安成员</span>
+		</td>
+		<td class="b3">
+		<span class="clan">电网</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">18级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">基础伤害变为135%，抽空目标体力并随机致伤一处。（对NPC无效）</span>
+		</td>
+		<td class="b3">
+		<span class="red">70点怒气</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FFD700">锡安成员</span>
+		</td>
+		<td class="b3">
+		<span class="clan">过载</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">25级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">消耗所有怒气。获得（1.5x怒气）%的虚假生命。</span>
+		</td>
+		<td class="b3">
+		<span class="red">任意怒气<br>每局可使用1次</span>
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FFFF33">富家子弟</span>
+		</td>
+		<td class="b3">
+		<span class="clan">网购</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">3级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">在任何地图均可使用商店。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FFFF33">富家子弟</span>
+		</td>
+		<td class="b3">
+		<span class="clan">威压</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">7级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">本次攻击附加(金钱/20)点伤害，最多250点。</span>
+		</td>
+		<td class="b3">
+		<span class="red">30点怒气</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FFFF33">富家子弟</span>
+		</td>
+		<td class="b3">
+		<span class="clan">利息</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">12级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">每升一级获得200元。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FFFF33">富家子弟</span>
+		</td>
+		<td class="b3">
+		<span class="clan">佣兵</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">18级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">消耗1200元，在当前地点随机召唤一名佣兵。佣兵和雇主不会进入战斗界面。</span>
+		</td>
+		<td class="b3">
+		<span class="red">1200元<br>每局可以使用2次</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FFFF33">富家子弟</span>
+		</td>
+		<td class="b3">
+		<span class="clan">人杰</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">25级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">战斗时总是计算你的最高熟练。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#ADFF2F">灌篮高手</span>
+		</td>
+		<td class="b3">
+		<span class="clan">枭眼</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">3级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">使此次攻击必中，同时最终伤害变为80%。</span>
+		</td>
+		<td class="b3">
+		<span class="red">60点怒气</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#ADFF2F">灌篮高手</span>
+		</td>
+		<td class="b3">
+		<span class="clan">附魔</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">7级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">随机附加火冰毒雷音中的1种属性伤害。</span>
+		</td>
+		<td class="b3">
+		<span class="red">10点怒气</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#ADFF2F">灌篮高手</span>
+		</td>
+		<td class="b3">
+		<span class="clan">花雨</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">12级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">属性伤害提高30%。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#ADFF2F">灌篮高手</span>
+		</td>
+		<td class="b3">
+		<span class="clan">流星</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">18级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">射程+2(同射)，受到射程内的攻击时必定反击。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#ADFF2F">灌篮高手</span>
+		</td>
+		<td class="b3">
+		<span class="clan">百出</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">25级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">反击和先制伤害提高60%。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	
+	
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#BDB76B">街头霸王</span>
+		</td>
+		<td class="b3">
+		<span class="clan">激怒</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">3级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">受到攻击时获得5点怒气。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#BDB76B">街头霸王</span>
+		</td>
+		<td class="b3">
+		<span class="clan">闷棍</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">7级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">目标每损失一点体力就附加一点伤害。对NPC则为将最终伤害变为130%。</span>
+		</td>
+		<td class="b3">
+		<span class="red">70点怒气</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#BDB76B">街头霸王</span>
+		</td>
+		<td class="b3">
+		<span class="clan">偷袭</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">12级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">物理伤害变为120%且不会被反击。</span>
+		</td>
+		<td class="b3">
+		<span class="red">50点怒气</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#BDB76B">街头霸王</span>
+		</td>
+		<td class="b3">
+		<span class="clan">灭气</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">18级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">攻击玩家时目标体力减少伤害值的2/3。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#BDB76B">街头霸王</span>
+		</td>
+		<td class="b3">
+		<span class="clan">欺凌</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">25级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">攻击时附加武器效十分之一的伤害。最多200点。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FA8072">拆弹专家</span>
+		</td>
+		<td class="b3">
+		<span class="clan">高能</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">3级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">本次攻击无视对方防爆和属性防御。</span>
+		</td>
+		<td class="b3">
+		<span class="red">60点怒气</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FA8072">拆弹专家</span>
+		</td>
+		<td class="b3">
+		<span class="clan">共振</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">7级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">致伤率提高60%。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FA8072">拆弹专家</span>
+		</td>
+		<td class="b3">
+		<span class="clan">强击</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">12级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">属性伤害提高10%。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FA8072">拆弹专家</span>
+		</td>
+		<td class="b3">
+		<span class="clan">细致</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">18级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">命中率提高20%。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FA8072">拆弹专家</span>
+		</td>
+		<td class="b3">
+		<span class="clan">内爆</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">25级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">造成130%伤害，使对方全身受伤，若已有部位受伤，则毁掉此部位防具并使对方生命上限降低1/3。对NPC则变为造成400%伤害。</span>
+		</td>
+		<td class="b3">
+		<span class="red">100点怒气<br>每局可使用1次</span>
+		</td>
+	</tr>
+	
+	
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FF4500">肉根兄贵</span>
+		</td>
+		<td class="b3">
+		<span class="clan">活化</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">3级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">每次攻击提高1点基础攻击，每次反击提高1点基础防御。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FF4500">肉根兄贵</span>
+		</td>
+		<td class="b3">
+		<span class="clan">压制</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">7级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">消耗15%最大生命值，附加相同的伤害。</span>
+		</td>
+		<td class="b3">
+		<span class="red">50点怒气</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FF4500">肉根兄贵</span>
+		</td>
+		<td class="b3">
+		<span class="clan">铁骨</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">12级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">受到的反击和先制伤害减少10%。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FF4500">肉根兄贵</span>
+		</td>
+		<td class="b3">
+		<span class="clan">刚击</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">18级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">攻击时附加最大生命值10%的伤害。最多120点。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FF4500">肉根兄贵</span>
+		</td>
+		<td class="b3">
+		<span class="clan">斗魂</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">25级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">生命值在50%以下时攻击附加40%目标最大生命值的伤害，最多400点。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FF1493">天赋异禀</span>
+		</td>
+		<td class="b3">
+		<span class="clan">适应</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">3级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">最终伤害提高2%，反噬受到的伤害降至10%，不与HP制御的效果叠加。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FF1493">天赋异禀</span>
+		</td>
+		<td class="b3">
+		<span class="clan">贯通</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">7级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">每次攻击随机获得一点额外熟练。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FF1493">天赋异禀</span>
+		</td>
+		<td class="b3">
+		<span class="clan">吞噬</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">12级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">全系熟练获得对方熟练总和的1/15的提高（对NPC和走路萌物无效）。</span>
+		</td>
+		<td class="b3">
+		<span class="red">100点怒气<br>每局可使用1次</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FF1493">天赋异禀</span>
+		</td>
+		<td class="b3">
+		<span class="clan">解构</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">18级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">攻击时附加对方武器基础效的1/12的伤害，最多160点。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#FF1493">天赋异禀</span>
+		</td>
+		<td class="b3">
+		<span class="clan">觉醒</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">25级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">其他系别的熟练加成变为50%。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	
+	
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#00EEEE">高速成长</span>
+		</td>
+		<td class="b3">
+		<span class="clan">本能</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">3级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">本次攻击可以造成(100+等级)%的最终伤害。</span>
+		</td>
+		<td class="b3">
+		<span class="red">40点怒气</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#00EEEE">高速成长</span>
+		</td>
+		<td class="b3">
+		<span class="clan">勤学</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">7级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">你每次命中额外获得1点经验值。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#00EEEE">高速成长</span>
+		</td>
+		<td class="b3">
+		<span class="clan">天妒</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">12级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">随机获得以下效果之一：生命值上限增加50%/生命值上限降低50%/金钱增加50%/金钱清零/熟练清零/变成走路萌物。</span>
+		</td>
+		<td class="b3">
+		<span class="red">100点怒气</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#00EEEE">高速成长</span>
+		</td>
+		<td class="b3">
+		<span class="clan">主宰</span>
+		</td>
+		<td class="b3">
+		<span class="lime">主动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">18级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">最终伤害变为120%，将目标所有防具耐久变成2。对NPC变为造成300%伤害。</span>
+		</td>
+		<td class="b3">
+		<span class="red">100点怒气<br>每局可以使用2次</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b1" height=40px>
+		<font color="#00EEEE">高速成长</span>
+		</td>
+		<td class="b3">
+		<span class="clan">极致</span>
+		</td>
+		<td class="b3">
+		<span class="lime">被动</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">25级</span>
+		</td>
+		<td class="b3">
+		<span class="clan">你的每次攻击将获得3点熟练度。</span>
+		</td>
+		<td class="b3">
+		<span class="red">无</span>
+		</td>
+	</tr>
+</table>
+<hr>
+<p><b style="FONT-SIZE: 120%; color: #98fb98"><span class="subtitle3">■进化武器</span></p></b>
+<span class="yellow"><b><p><span class="subtitle3">【进化武器系统】</span></p>
+<p>进化武器系统更新于不知道多少年不知道多少月反正也没人看这个日，由<span class="red">虚子</span>编写。<br>
+目前可以进化的武器为<span class="clan">飞龙刀系列</span>。<br>
+下表显示的是飞龙刀系列的进化及获得方式：<br>
+</p></b>
+<table cellSpacing=0 cellPadding=0>
+	<tr>
+		<td class="b1" height=20px>
+		<span>武器名称</span>
+		</td>
+		<td class="b1" >
+		<span>武器属性</span>
+		</td>
+		<td class="b1" >
+		<span>进化需求</span>
+		</td>
+		<td class="b1" >
+		<span>额外说明</span>
+		</td>
+	<tr>
+	<tr>
+		<td class="b3" height=40px>
+		<span class="lime">骨刀【狛牙】</span>
+		</td>
+		<td class="b3">
+		<span class="lime">斩系武器/30/30/进化</span>
+		</td>
+		<td class="b3">
+		<span class="clan">无</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">可在【商店】-【锐器】中花20元购买</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b3" height=40px>
+		<span class="lime">飞龙刀【双火】</span>
+		</td>
+		<td class="b3">
+		<span class="lime">斩系武器/50/50/火焰+进化</span>
+		</td>
+		<td class="b3">
+		<span class="clan">装备骨刀【狛牙】后背包中有一个【打火机】，然后进化</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b3" height=40px>
+		<span class="lime">飞龙刀【双炎】</span>
+		</td>
+		<td class="b3">
+		<span class="lime">斩系武器/180/220/火焰+进化</span>
+		</td>
+		<td class="b3">
+		<span class="clan">装备飞龙刀【双火】后击杀NPC至少8名，然后进化</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">无</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b3" height=40px>
+		<span class="lime">飞龙刀【双红莲】</span>
+		</td>
+		<td class="b3">
+		<span class="lime">斩系武器/180/120/火焰+连击+进化</span>
+		</td>
+		<td class="b3">
+		<span class="clan">装备飞龙刀【双炎】后攻击至少110次，然后进化</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">武器exp高于110但低于150时可以提前进化，<br>需要额外消耗（150-当前exp）*80的金钱。</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b3" height=40px>
+		<span class="lime">飞龙刀【焰二重】</span>
+		</td>
+		<td class="b3">
+		<span class="lime">斩系武器/860/150/火焰+灼焰+进化</span>
+		</td>
+		<td class="b3">
+		<span class="clan">装备飞龙刀【双红莲】后背包中有一把效果不低于450的锐器，然后进化</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">当双红莲进化时如果同时满足金钱与武器的条件，<br>会优先选择进化成焰二重</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b3" height=40px>
+		<span class="lime">飞龙刀【银】</span>
+		</td>
+		<td class="b3">
+		<span class="lime">斩系武器/630/20/连击+灼焰+进化</span>
+		</td>
+		<td class="b3">
+		<span class="clan">装备飞龙刀【双红莲】后身上拥有至少7500元，然后进化</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">当双红莲进化时如果同时满足金钱与武器的条件，<br>会优先选择进化成焰二重</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b3" height=40px>
+		<span class="lime">飞龙刀【椿】</span>
+		</td>
+		<td class="b3">
+		<span class="lime">斩系武器/7000/∞/菁英+贯穿+连击+火焰+灼焰</span>
+		</td>
+		<td class="b3">
+		<span class="clan">装备飞龙刀【银】后击杀至少三名玩家，然后进化</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">击杀的玩家等级需要至少11级</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="b3" height=40px>
+		<span class="lime">飞龙刀【八重樱】</span>
+		</td>
+		<td class="b3">
+		<span class="lime">斩系武器/3000/3000/爆炸+火焰+冻气+灼焰+冰华</span>
+		</td>
+		<td class="b3">
+		<span class="clan">装备飞龙刀【焰二重】后击杀至少五名全息幻象，<br>身上拥有至少6500元，然后进化</span>
+		</td>
+		<td class="b3">
+		<span class="yellow">无</span>
+		</td>
+	</tr>
+</table>
+</div>
+{template footer}

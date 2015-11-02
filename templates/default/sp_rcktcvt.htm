@@ -1,0 +1,52 @@
+<input type="hidden" name="mode" value="sp_rcktcvt">
+<input type="hidden" id="command" name="command" value="rcktcvt">
+恐怖份子称号可以将一枚<span class="yellow">驱云弹</span>与其他道具结合，改装出不同用途的特殊道具。<br>
+所有可行的改装列表请参见帮助。<br><br>
+请选择驱云弹：<br>
+<select id="t1" name="t1" value="back">
+<option value="back">返回<br>
+<!--{if $itms1 && $itm1=='驱云弹'}-->
+<option value="1"><span class="yellow">{$itm1}</span>/{$itme1}/{$itms1}<br>
+<!--{/if}-->
+<!--{if $itms2 && $itm2=='驱云弹'}-->
+<option value="2"><span class="yellow">{$itm2}</span>/{$itme2}/{$itms2}<br>
+<!--{/if}-->
+<!--{if $itms3 && $itm3=='驱云弹'}-->
+<option value="3"><span class="yellow">{$itm3}</span>/{$itme3}/{$itms3}<br>
+<!--{/if}-->
+<!--{if $itms4 && $itm4=='驱云弹'}-->
+<option value="4"><span class="yellow">{$itm4}</span>/{$itme4}/{$itms4}<br>
+<!--{/if}-->
+<!--{if $itms5 && $itm5=='驱云弹'}-->
+<option value="5"><span class="yellow">{$itm5}</span>/{$itme5}/{$itms5}<br>
+<!--{/if}-->
+<!--{if $itms6 && $itm6=='驱云弹'}-->
+<option value="6"><span class="yellow">{$itm6}</span>/{$itme6}/{$itms6}<br>
+<!--{/if}-->
+</select>
+<br><br>
+请选择参与改装的另一个素材。<br> 
+<select id="t2" name="t2" value="back">
+<option value="back">返回<br>
+<!--{if $itms1}-->
+<option value="1"><span class="yellow">{$itm1}</span>/{$itme1}/{$itms1}<br>
+<!--{/if}-->
+<!--{if $itms2}-->
+<option value="2"><span class="yellow">{$itm2}</span>/{$itme2}/{$itms2}<br>
+<!--{/if}-->
+<!--{if $itms3}-->
+<option value="3"><span class="yellow">{$itm3}</span>/{$itme3}/{$itms3}<br>
+<!--{/if}-->
+<!--{if $itms4}-->
+<option value="4"><span class="yellow">{$itm4}</span>/{$itme4}/{$itms4}<br>
+<!--{/if}-->
+<!--{if $itms5}-->
+<option value="5"><span class="yellow">{$itm5}</span>/{$itme5}/{$itms5}<br>
+<!--{/if}-->
+<!--{if $itms6}-->
+<option value="6"><span class="yellow">{$itm6}</span>/{$itme6}/{$itms6}<br>
+<!--{/if}-->
+</select>
+<br><br>
+<input type="button" class="cmdbutton" name="submit" value="提交" onclick="postCmd('gamecmd','command.php');this.disabled=true;">
+<input type="button" class="cmdbutton" name="submit" value="返回" onclick="$('command').value='back'; postCmd('gamecmd','command.php');this.disabled=true;">

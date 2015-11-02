@@ -1,0 +1,7 @@
+#!/bin/bash
+rm main
+g++ armor.cpp item.cpp mixitem.cpp shopitem.cpp common.cpp main.cpp npc.cpp weapon.cpp controller.cpp mapitem.cpp profile.cpp wget.cpp slots.cpp firecontrol.cpp news.cpp pvp.cpp radar.cpp food.cpp -o main -Wall -g
+echo "=============== Running ==============="
+./main
+echo "======================================="
+

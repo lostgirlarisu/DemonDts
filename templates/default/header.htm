@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=$charset">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv='expires' content='0'>
+<title> {lang title} </title>
+<!--{if isset($extrahead)}-->$extrahead<!--{/if}-->
+
+<!--{if $allowcsscache}--><link rel="stylesheet" type="text/css" id="css" href="gamedata/cache/style_20140216.css"><!--{else}--><style type="text/css" id="css">{template css}</style><!--{/if}-->
+<script type="text/javascript" src="include/common.js"></script>
+<script type="text/javascript" src="include/game20140705.js"></script>
+<script type="text/javascript" src="include/json.js"></script>
+</head>
+<BODY <!--{if CURSCRIPT == 'game' }-->onkeydown="processevent(event);"<!--{/if}-->>
+<div class="title" >{lang title}</div>
+
+<div class="headerlink" >
+<a href="{$server_addr}index.php">>>{lang index}</a>
+<!--{if isset($cuser) && isset($cpass)}--><a href="{$server_addr}user_profile.php">>>{lang user}</a>
+<!--{else}--><a href="{$server_addr}register.php">>>{lang register}</a><!--{/if}-->
+<!--{if ($server_addr!=$cache_server_addr)}-->
+<!--{if ($is_cache_server)}-->
+<a href="{$cache_server_addr}game.php">>>{lang game}</a>
+<!--{else}-->
+<a href="{$cache_server_addr}cross_login.php?username=<!--{eval echo urlencode($cuser);}-->&password={$cpass}">>>{lang game}</a>
+<!--{/if}-->
+<!--{else}-->
+<a href="{$server_addr}game.php">>>{lang game}</a>
+<!--{/if}-->
+<a href="{$server_addr}map.php">>>{lang map}</a>
+<a href="{$server_addr}news.php">>>{lang news}</a>
+<a href="{$server_addr}alive.php">>>{lang alive}</a>
+<a href="{$server_addr}winner.php">>>{lang winner}</a>
+<a href="{$server_addr}rank.php">>>{lang rank}</a>
+<a href="{$server_addr}help.php">>>{lang help}</a>
+<a href="{$server_addr}admin.php">>>{lang admin}</a>
+<a href="#" target="_blank">>>{lang report}</a>
+<a href="$homepage" target="_blank">>>{lang homepage}</a>
+<!--[if lt IE 7]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0027_Simplified Chinese.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div> <![endif]-->
+<!--{if (CURSCRIPT == 'game' && $pls=='34' && $gamestate<50)}-->
+<audio autoplay="autoplay" loop="loop">
+  <source src="{$server_addr}img/other/sb.mp3" type="audio/mpeg">
+  <source src="{$server_addr}img/other/sb.ogg" type="audio/ogg">
+</audio>
+<!--{elseif (CURSCRIPT == 'game' && $club=='23' && $sktime<1)}-->
+<audio autoplay="autoplay" loop="loop">
+  <source src="{$server_addr}img/other/TB.mp3" type="audio/mpeg">
+</audio>
+<!--{/if}-->
+
+
+</div>
+<div>

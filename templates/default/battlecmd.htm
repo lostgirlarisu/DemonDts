@@ -1,0 +1,345 @@
+现在想要做什么？<br><br>
+向对手大喊：<br><input size="30" type="text" name="message" maxlength="60"><br><br>
+<input type="hidden" name="mode" value="combat">
+<input type="hidden" id="command" name="command" value="back">
+<input type="hidden" id="subcmd" name="subcmd" value="">
+<table cellSpacing=0 cellPadding=0>
+<tr><td width=100px align="center" style="vertical-align:top">
+<input type="button" id="submit" class="cmdbutton" style="width:98" name="w1" value="{$attinfo[$w1]}" onclick="$('command').value='$w1';postCmd('gamecmd','command.php');this.disabled=true;"><br>
+<!--{if $w2}-->
+<input type="button" class="cmdbutton" style="width:98" name="w2" value="{$attinfo[$w2]}" onclick="$('command').value='$w2';postCmd('gamecmd','command.php');this.disabled=true;"><br>
+<!--{/if}-->
+<!--{if ($club==9 && $lvl>=11 && $sktime>0)}-->
+	<br>
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="充能" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='recharge';postCmd('gamecmd','command.php');this.disabled=true;"><br>
+	<div style="width:90%; text-align:left;">获得100点怒气<br>还可使用<span class="yellow">$sktime</span>次</div>
+<!--{/if}-->
+<br><input type="button" class="cmdbutton" name="back" value="逃跑" onclick="postCmd('gamecmd','command.php');this.disabled=true;"> 
+</td>
+
+<!--{if (($club==1)&&(strpos($wepk,'WP')!==false))}-->
+	<!--{if (($rage>=20)&&($lvl>=3))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="偷袭" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='ambush';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">造成<span class="red">120</span>%物理伤害且不会受到反击；<span class="yellow">20</span>怒气</div>
+	</td>
+	<!--{/if}-->
+	<!--{if (($rage>=70)&&($lvl>=11))}-->
+	<!--{if (!$fog)}-->
+	<!--{if ($w_type==0)}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="闷棍" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='bash';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">敌方每损失一点体力附加一点伤害；<span class="yellow">70</span>怒气</div>
+	</td>
+	<!--{/if}-->
+	<!--{else}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="闷棍" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='bash';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">敌方每损失一点体力附加一点伤害；对NPC则无效果；<span class="yellow">70</span>怒气</div>
+	</td>
+	<!--{/if}-->
+	<!--{/if}-->
+<!--{/if}-->
+<!--{if (($club==2)&&(strpos($wepk,'WK')!==false))}-->
+	<!--{if (($rage>=70)&&($lvl>=11))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="烈风" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='storm';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">造成<span class="red">140</span>%最终伤害，无视防御属性；<span class="yellow">70</span>怒气</div>
+	</td>
+	<!--{/if}-->
+<!--{/if}-->
+<!--{if (($club==5)&&(strpos($wepk,'WD')!==false))}-->
+	<!--{if (($rage>=60)&&($lvl>=3))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="高能" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='boom';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">攻击无视敌方防爆和属性防御；<br>消耗<span class="yellow">60</span>怒气</div>
+	</td>
+	<!--{/if}-->
+	<!--{if (($rage>=50)&&($lvl>=19)&&($sktime>0))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="内爆" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='inplosion';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<!--{if (!$fog)}-->
+	<!--{if ($w_type==0)}-->
+	<div style="width:90%; text-align:left;">造成<span class="red">130</span>%最终伤害，使对方全身受伤；若已有部位受伤，则毁掉此部位防具并使对方生命上限降低1/3；消耗<span class="yellow">50</span>怒气，还可使用<span class="yellow">$sktime</span>次</div>
+	<!--{else}-->
+	<div style="width:90%; text-align:left;">造成<span class="red">400</span>%最终伤害；消耗<span class="yellow">50</span>怒气，还可使用<span class="yellow">$sktime</span>次</div>
+	<!--{/if}-->
+	<!--{else}-->
+	<div style="width:90%; text-align:left;">造成<span class="red">130</span>%最终伤害，使对方全身受伤；若已有部位受伤，则毁掉此部位防具并使对方生命上限降低1/3；对NPC则造成400%最终伤害；消耗<span class="yellow">50</span>怒气，还可使用<span class="yellow">$sktime</span>次</div>
+	<!--{/if}-->
+	</td>
+	<!--{/if}-->
+<!--{/if}-->
+
+<!--{if (($club==3)&&(strpos($wepk,'WC')!==false))}-->
+	<!--{if (($rage>=10)&&($lvl>=3))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="附魔" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='enchant';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">随机附加一种基础属性伤害(可能重复)；消耗<span class="yellow">10</span>点怒气</div>
+	</td>
+	<!--{/if}-->
+	<!--{if (($rage>=60)&&($lvl>=7))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="枭眼" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='eagleeye';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">使本次攻击必中；消耗<span class="yellow">60</span>点怒气</div>
+	</td>
+	<!--{/if}-->
+<!--{/if}-->
+
+<!--{if (($club==4)&&(strpos($wepk,'WG')!==false)&&(strpos($weps,'∞')===false))}-->	
+	<!--{if (($rage>=20)&&($lvl>=3))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="瞄准" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='aim';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">造成<span class="red">120</span>%物理伤害，命中率<span class="yellow">+15</span>%；消耗<span class="yellow">20</span>怒气</div>
+	</td>
+	<!--{/if}-->
+	<!--{if (($rage>=100)&&($lvl>=15))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="咆哮" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='roar';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<!--{if (!$fog)}-->
+	<!--{if ($w_type==0)}-->
+	<div style="width:90%; text-align:left;">造成<span class="red">180</span>%属性伤害，对目标附加烧伤和所有部位受伤状态；消耗<span class="yellow">100</span>怒气</div>
+	<!--{else}-->
+	<div style="width:90%; text-align:left;">造成<span class="red">180</span>%属性伤害，对目标附加烧伤状态；消耗<span class="yellow">100</span>怒气</div>
+	<!--{/if}-->
+	<!--{else}-->
+	<div style="width:90%; text-align:left;">造成<span class="red">180</span>%属性伤害并使目标烧伤；若目标为玩家还会附加所有部位受伤状态；消耗<span class="yellow">100</span>怒气</div>
+	<!--{/if}-->
+	</td>
+	<!--{/if}-->
+<!--{/if}-->
+
+<!--{if (($club==97)&&(strpos($wepk,'WG')!==false)&&(strpos($weps,'∞')===false))}-->	
+	<!--{if ($rage>=19)}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="点射" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='burst';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">附加(射熟/3)点伤害(<span class="red">$bper</span>点)；消耗<span class="yellow">25</span>点怒气</div>
+	</td>
+	<!--{/if}-->
+	<!--{if (($rage>=70)&&($lvl>=15))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="连射" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='slayer';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">本次攻击消耗所有子弹，忽略目标<span class="yellow">$wepss</span>点防御；消耗<span class="yellow">70</span>怒气</div>
+	</td>
+	<!--{/if}-->
+<!--{/if}-->
+
+<!--{if $club==7}-->
+	<!--{if (($rage>=15)&&($lvl>=15))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="电网" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='net';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<!--{if (!$fog)}-->
+	<!--{if ($w_type==0)}-->
+	<div style="width:90%; text-align:left;">造成<span class="red">135</span>%基础伤害，抽空目标体力并随机致伤一处；消耗<span class="yellow">15</span>点怒气</div>
+	<!--{else}-->
+	<div style="width:90%; text-align:left;">造成<span class="red">135</span>%基础伤害；消耗<span class="yellow">15</span>点怒气</div>
+	<!--{/if}-->
+	<!--{else}-->
+	<div style="width:90%; text-align:left;">造成<span class="red">135</span>%基础伤害；若目标为玩家还会抽空目标体力并随机致伤一处；消耗<span class="yellow">15</span>点怒气</div>
+	<!--{/if}-->
+	</td>
+	<!--{/if}-->
+<!--{/if}-->
+
+<!--{if $club==26}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="谈笑风生" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='teach';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">若此次攻击将击杀目标NPC，则改为将该NPC转化为你的代表，并使其获得30%额外生命值和100点熟练度且恢复满生命值。</div>
+	</td>
+	<!--{if (($rage>=20)&&($lvl>=7))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="批判一番" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='blame';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">本次攻击附加<span class="red">60</span>点伤害，且本地图每存在一名代表就额外附加<span class="red">40</span>点伤害；消耗<span class="yellow">20</span>点怒气</div>
+	</td>
+	<!--{/if}-->
+<!--{/if}-->
+
+<!--{if $club==11}-->
+	<!--{if (($rage>=30)&&($lvl>=7))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="威压" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='threat';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">附加(你现有金钱/20)点伤害(<span class="red">$gdm</span>点)；消耗<span class="yellow">30</span>点怒气</div>
+	</td>
+	<!--{/if}-->
+<!--{/if}-->
+
+<!--{if $club==6}-->
+	<!--{if (($rage>=15)&&($lvl>=7))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="天变" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='aurora';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">根据当前天气产生不同的附加效果；<span class="yellow">15</span>点怒气</div>
+	</td>
+	<!--{/if}-->
+<!--{/if}-->
+
+<!--{if $club==19}-->
+	<!--{if (($rage>=50)&&($lvl>=7))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="怒刺" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='ragestrike';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">造成<span class="red">200</span>%物理伤害，但命中率降低50%；消耗<span class="yellow">30</span>点怒气</div>
+	</td>
+	<!--{/if}-->
+<!--{/if}-->
+
+<!--{if $club==23}-->
+	<!--{if (($rage>=30)&&($lvl>=7))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="乱击" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='punch';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">附加(殴熟/5)点伤害(<span class="red">$pper</span>点)；消耗<span class="yellow">30</span>点怒气</div>
+	</td>
+	<!--{/if}-->
+<!--{/if}-->
+
+<!--{if $club==14}-->
+	<!--{if (($rage>=30)&&($lvl>=7))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="压制" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='suppress';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">消耗<span class="yellow">$supress_cost</span>点生命值，附加相同数值的伤害；消耗<span class="yellow">30</span>点怒气</div>
+	</td>
+	<!--{/if}-->
+<!--{/if}-->
+
+<!--{if $club==18}-->
+	<!--{if (($rage>=60)&&($lvl>=11))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="解构" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='analysis';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<!--{if (!$fog)}-->
+	<!--{if ($w_type!=0)}-->
+	<div style="width:90%; text-align:left;">附加200点伤害；消耗<span class="yellow">60</span>点怒气</div>
+	<!--{else}-->
+	<div style="width:90%; text-align:left;">敌方每损失一点生命附加一点伤害；消耗<span class="yellow">60</span>点怒气</div>
+	<!--{/if}-->
+	<!--{else}-->
+	<div style="width:90%; text-align:left;">敌方每损失一点生命附加一点伤害；对NPC则固定造成200点伤害；消耗<span class="yellow">60</span>点怒气</div>
+	<!--{/if}-->
+	</td>
+	<!--{/if}-->
+	<!--{if (!$fog)}-->
+	<!--{if (($rage>=100)&&($lvl>=15)&&($w_type==0)&&($w_club!=17)&&($sktime>0))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="吞噬" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='absorb';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">全系熟练提升敌方各系熟练之和的1/15；消耗<span class="yellow">100</span>点怒气，还可使用<span class="yellow">$sktime</span>次</div>
+	</td>
+	<!--{/if}-->
+	<!--{else}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input disabled="true" type="button" class="cmdbutton" style="width:98" name="bskill" value="吞噬" ><br />
+	<div style="width:90%; text-align:left;">吞噬技能在雾天不能被发动</div>
+	</td>
+	<!--{/if}-->
+<!--{/if}-->
+
+<!--{if $club==25}-->
+	<!--{if (($rage>=15)&&($lvl>=3))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="集中" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='focus';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">附加(50+等级x4)点伤害(<span class="red">$fper</span>点)；消耗<span class="yellow">15</span>点怒气</div>
+	</td>
+	<!--{/if}-->
+	<!--{if (($rage>=50)&&($lvl>=11))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="追猎" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='hunt';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">附加(50+等级x4)点伤害(<span class="red">$fper</span>点)且不受反击；若目标是玩家还会将其标记。消耗<span class="yellow">50</span>点怒气</div>
+	</td>
+	<!--{/if}-->
+<!--{/if}-->
+
+<!--{if $club==10}-->
+	<!--{if (($rage>=30)&&($lvl>=3))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="本能" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='ego';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">造成(<span class="yellow">100+你的等级</span>)%最终伤害(当前为<span class="red">$egoper</span>%)；消耗<span class="yellow">30</span>点怒气</div>
+	</td>
+	<!--{/if}-->
+	<!--{if ($lvl>=15 && $rage>=100 && $sktime>0)}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="主宰" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='dominate';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<!--{if (!$fog)}-->
+	<!--{if ($w_type==0)}-->
+	<div style="width:90%; text-align:left;">造成<span class="red">120</span>%最终伤害，并随机毁掉敌方一件防具；消耗<span class="yellow">100</span>点怒气，还可使用<span class="yellow">$sktime</span>次</div>
+	<!--{else}-->
+	<div style="width:90%; text-align:left;">造成<span class="red">300</span>%最终伤害；消耗<span class="yellow">100</span>点怒气，还可使用<span class="yellow">$sktime</span>次</div>
+	<!--{/if}-->
+	<!--{else}-->
+	<div style="width:90%; text-align:left;">造成<span class="red">120</span>%最终伤害，并随机毁掉敌方一件防具；对NPC则造成300%最终伤害；消耗<span class="yellow">100</span>点怒气，还可使用<span class="yellow">$sktime</span>次</div>
+	<!--{/if}-->
+	</td>
+	<!--{/if}-->
+<!--{/if}-->
+
+<!--{if $club==9}-->
+	<!--{if (($rage>=40)&&($lvl>=3))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="必杀" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='crit';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">造成<span class="red">200</span>%物理伤害；消耗<span class="yellow">40</span>点怒气</div>
+	</td>
+	<!--{/if}-->
+	<!--{if (($rage>=60)&&($lvl>=19))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="心火" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='innerfire';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">造成<span class="red">200</span>%最终伤害；消耗<span class="yellow">60</span>点怒气</div>
+	</td>
+	<!--{/if}-->
+<!--{/if}-->
+
+<!--{if $club==8}-->
+	<!--{if (($rage>=40)&&($lvl>=11))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="毒刺" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='sting';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">毒性伤害变为150%并使敌人中<span class="purple">猛毒</span>状态；消耗<span class="yellow">40</span>点怒气</div>
+	</td>
+	<!--{/if}-->
+	<!--{if (($lvl>=19)&&($sktime>0))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="暗杀" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='assasinate';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<!--{if !$fog}-->
+	<div style="width:90%; text-align:left;">造成<span class="red">$assper</span>%最终伤害；还可使用<span class="yellow">$sktime</span>次</div>
+	<!--{else}-->
+	<div style="width:90%; text-align:left;">至少造成<span class="red">150</span>%最终伤害；消耗<span class="yellow">100</span>点怒气，还可使用<span class="yellow">$sktime</span>次</div>
+	<!--{/if}-->
+	</td>
+	<!--{/if}-->
+<!--{/if}-->
+<!--{if $club==21}-->
+	<!--{if ($wepe/2>=$w_mhp)}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="劫持" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='hijack';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">将对方劫持为你的<span class="orange">人质</span>；会消耗手中的爆炸物。</div>
+	</td>
+	<!--{/if}-->
+<!--{/if}-->
+<!--{if (($club==24) || ($club==99))}-->
+	<!--{if (($souls>=1) && ($lvl>=7))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<img src="img/debuffA.png" name="bskill" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='entangle';postCmd('gamecmd','command.php');this.disabled=true;">
+	<!--{if ($lvl>=11)}-->
+	<img src="img/debuffB.gif" name="bskill" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='fear';postCmd('gamecmd','command.php');this.disabled=true;"><br>
+	<!--{/if}-->
+	<!--{if ($lvl>=15)}-->
+	<img src="img/debuffC.gif" name="bskill" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='corrupt';postCmd('gamecmd','command.php');this.disabled=true;">
+	<!--{/if}-->
+	<br>附加减益效果<br>
+	</td>
+	<!--{/if}-->
+	<!--{if (($souls>=4)&&($lvl>=19))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="噩梦" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='nightmare';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">释放25%你拥有的灵魂，削弱对方的防御并造成巨大的伤害</div>
+	</td>
+	<!--{/if}-->
+<!--{/if}-->
+<!--{if $club==70}-->
+	<!--{if (($rage>=5)&&($lvl>=7)&&($ss>=20))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="战歌" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='battlesong';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">造成<span class="red">150</span>%基础伤害并追加音波攻击；消耗<span class="yellow">5</span>点怒气和<span class="yellow">20</span>点歌魂</div>
+	</td>
+	<!--{/if}-->
+	<!--{if (($rage>=50)&&($lvl>=19)&&($sktime>0))}-->
+	<td width=100px align="center" style="vertical-align:top">
+	<input type="button" class="cmdbutton" style="width:98" name="bskill" value="安魂" onclick="$('command').value='$w1';$('subcmd').name='bsk';$('subcmd').value='finalsong';postCmd('gamecmd','command.php');this.disabled=true;"><br />
+	<div style="width:90%; text-align:left;">根据歌魂消耗造成对方生命上限值的<span class="red">0～75</span>%的伤害，对NPC则造成<span class="red">300</span>%最终伤害；消耗<span class="yellow">50</span>点怒气和<span class="yellow">全部</span>歌魂，还可使用<span class="yellow">$sktime</span>次</div>
+	</td>
+	<!--{/if}-->
+<!--{/if}-->
+</tr></table>

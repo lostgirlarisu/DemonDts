@@ -1,0 +1,3 @@
+verify_time=0.00050806999206543
+botservice_version=0.3-20140219-1
+game_ended=1

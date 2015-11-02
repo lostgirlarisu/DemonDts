@@ -1,0 +1,22 @@
+<table><tr>
+<td>
+<!--{if ($cpl[35]=='999') }--><img src="img/ach/35.gif"><!--{/if}-->
+<!--{if ($cpl[35]=='0') }--><img src="img/ach/N.gif"><!--{/if}-->
+<!--{if (($cpl[35]!='999')&&($cpl[35]!='0')) }--><img src="img/ach/D.gif"><!--{/if}-->
+</td>
+<td valign="top" align="left">
+<b>
+<!--{if ($cpl[35]=='0') }-->英雄模式<!--{/if}-->
+<!--{if ($cpl[35]=='1') }-->此一时彼一时<!--{/if}-->
+<!--{if ($cpl[35]=='2') }-->外来者<!--{/if}-->
+<!--{if ($cpl[35]=='3') }-->完全胜利<!--{/if}-->
+<!--{if ($cpl[35]=='999') }-->完全胜利<!--{/if}-->
+</b>
+<!--{if ($cpl[35]=='999') }--><span class="lime">[完成]</span><!--{else}--><!--{if ($cpl[35]==0) }--><span class="red">[未完成]</span><!--{else}--><span class="clan">[进行中]</span><!--{/if}--><!--{/if}--><br>
+<!--{if ($cpl[35]=='0') }--><font color="olive">奖励： <span class="evergreen">称号 远古意志</span><br></font> 完成英雄模式第一阶段<br><!--{/if}-->
+<!--{if ($cpl[35]=='1') }--><font color="olive">奖励： <span class="evergreen">称号 胜利者</span><br></font> 完成英雄模式第二阶段<br><!--{/if}-->
+<!--{if ($cpl[35]=='2') }--><font color="olive">奖励： <span class="evergreen">称号 时空的记忆</span><br></font> 完成英雄模式第三阶段<br><!--{/if}-->
+<!--{if ($cpl[35]=='3') }--><font color="olive">奖励： <span class="evergreen">称号 英雄</span><br></font> 击败最后的敌人<br><!--{/if}-->
+<!--{if ($cpl[35]=='999') }--><font color="olive">奖励： <span class="evergreen">称号 英雄</span><br></font> 击败最后的敌人<br><!--{/if}-->
+</td>
+</tr></table>

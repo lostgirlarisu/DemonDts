@@ -1,0 +1,12 @@
+<input type="hidden" name="mode" value="gem_canimal">
+<input type="hidden" id="command" name="command" value="canimal">
+你激活了橡树之心！<br>
+请选择你想变化成的野兽的形态：<br>
+<input type="radio" id="bear" name="animal" value="bear" checked><a onclick=sl('bear'); href="javascript:void(0);" >【暴熊】</a><br>
+<input type="radio" id="snake" name="animal" value="snake"><a onclick=sl('snake'); href="javascript:void(0);" >【蝮蛇】</a><br>
+<input type="radio" id="leopard" name="animal" value="leopard"><a onclick=sl('leopard'); href="javascript:void(0);" >【猎豹】</a><br>
+<input type="radio" id="tree" name="animal" value="tree"><a onclick=sl('tree'); href="javascript:void(0);" >【树人】</a><br>
+<input type="radio" id="eagle" name="animal" value="eagle"><a onclick=sl('eagle'); href="javascript:void(0);" >【龙鹰】</a><br>
+<input type="radio" id="dragon" name="animal" value="dragon"><a onclick=sl('dragon'); href="javascript:void(0);" >【巨龙】</a><br>
+<input type="button" class="cmdbutton" name="submit" value="变化" onclick="postCmd('gamecmd','command.php');this.disabled=true;">
+<input type="button" class="cmdbutton" name="submit" value="放弃" onclick="$('command').value='back'; postCmd('gamecmd','command.php');this.disabled=true;">

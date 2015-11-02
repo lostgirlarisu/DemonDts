@@ -1,0 +1,10 @@
+<input type="hidden" name="mode" value="item">
+<input type="hidden" name="usemode" value="ctrlhack">
+你想要做什么？<br>
+<br>
+<input type="radio" name="hcmd" id="back"  value="back" checked><a onclick=sl('back'); href="javascript:void(1);" >返回</a><br>
+<br>
+<input type="radio" name="hcmd" id="clean"  value="clean"><a onclick=sl('clean'); href="javascript:void(0);" >【解除所有禁区】</a><br>
+<input type="radio" name="hcmd" id="add"  value="add"><a onclick=sl('add'); href="javascript:void(0);" >【立刻增加禁区】</a><br>
+<br>
+<input type="button" class="cmdbutton" name="submit" value="确认操作" onclick="postCmd('gamecmd','command.php');this.disabled=true;"><br>

@@ -1,0 +1,12 @@
+<input type="hidden" name="mode" value="gem_moonstone">
+<input type="hidden" id="command" name="command" value="moonstone">
+你激活了月长石！<br>
+苍穹之上传来一道声音：“向月光献祭，可以换取等价的酬劳。”<br>
+请选择你要献祭的内容：<br>
+<input type="radio" id="mhp" name="sac_type" value="sac_mhp"><a onclick=sl('mhp'); href="javascript:void(0);" >【生命上限】</a><br>
+<input type="radio" id="msp" name="sac_type" value="sac_msp"><a onclick=sl('msp'); href="javascript:void(0);" >【体力上限】</a><br>
+<input type="radio" id="mss" name="sac_type" value="sac_mss"><a onclick=sl('mss'); href="javascript:void(0);" >【歌魂上限】</a><br>
+请输入你要献祭的值（必须为数字）：<br>
+<input type="text" name="sac_num" value=""><br>
+<input type="button" class="cmdbutton" name="submit" value="献祭" onclick="postCmd('gamecmd','command.php');this.disabled=true;">
+<input type="button" class="cmdbutton" name="submit" value="放弃" onclick="$('command').value='back'; postCmd('gamecmd','command.php');this.disabled=true;">

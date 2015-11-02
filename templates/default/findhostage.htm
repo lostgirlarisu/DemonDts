@@ -1,0 +1,18 @@
+现在想要做什么？<br><br>
+<input type="hidden" name="mode" value="ctrlhostage">
+<input type="hidden" id="command" name="command" value="back">
+<input type="button" class="cmdbutton" name="back" value="返回" onclick="postCmd('gamecmd','command.php');"><br><br>
+<input type="button" name="threat" value="威胁人质" onclick="$('command').value='threat';postCmd('gamecmd','command.php');"><br>
+<span class="grey">你可以威胁你的人质，警告他不要乱动，这将有助于你树立威信，并向他灌输你的价值观。</span><br>
+<input type="button" name="loot" value="勒索人质" onclick="$('command').value='loot';postCmd('gamecmd','command.php');"><br>
+<span class="grey">你可以勒索你的人质，向他的家属索要赎金，赎金数等于人质等级*2，只有不入流的恐怖分子才会选择这种低级的方式赚钱。</span><br>
+<!--{if $w_arb!=='捆绑式炸药'}-->
+<input type="button" name="onbodybomb" value="安装炸弹" onclick="$('command').value='onbodybomb';postCmd('gamecmd','command.php');"><br>
+<span class="grey">你可以为你的人质安装炸弹，这会消耗一个★捆绑式炸药★，你的人质由于被你洗脑会在受到致命伤时自爆。</span><br>
+<!--{/if}-->
+<!--{if ($w_arb=='捆绑式炸药')&&($w_arbs>0)}-->
+<input type="button" name="offbodybomb" value="卸下炸弹" onclick="$('command').value='offbodybomb';postCmd('gamecmd','command.php');"><br>
+<span class="grey">你可以解除这个可怜人身上的炸弹，但是由于你的粗劣手法，已经使用掉的炸药将不会返还。</span><br>
+<!--{/if}-->
+<input type="button" name="freehtg" value="释放人质" onclick="$('command').value='freehtg';postCmd('gamecmd','command.php');"><br>
+<span class="grey">你可以还这个可怜的人自由，不过也许你正做着另一种残忍的打算。</span><br>

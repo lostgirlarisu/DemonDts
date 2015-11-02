@@ -1,0 +1,18 @@
+现在想要做什么？<br><br>
+<input type="hidden" name="mode" value="ctrlhasi">
+<input type="hidden" id="command" name="command" value="back">
+<input type="button" class="cmdbutton" name="back" value="返回" onclick="postCmd('gamecmd','command.php');"><br><br>
+<input type="button" name="ad" value="强化攻防" onclick="$('command').value='ad';postCmd('gamecmd','command.php');"><br>
+<span class="grey">给你的粉丝一点人生经验，提高其20点基础攻防。</span><br>
+<input type="button" name="sk" value="强化熟练" onclick="$('command').value='sk';postCmd('gamecmd','command.php');"><br>
+<span class="grey">提高你的粉丝的知识水平，使其获得10点全系熟练。</span><br>
+<input type="button" name="hp" value="强化生命" onclick="$('command').value='hp';postCmd('gamecmd','command.php');"><br>
+<span class="grey">教导你的粉丝要闷声发大财，提高其50点生命上限并为其恢复40%生命和体力。</span><br>
+<!--{if $lvl>=3}-->
+<input type="button" name="go" value="另请高明" onclick="$('command').value='go';postCmd('gamecmd','command.php');"><br>
+<span class="grey">请你的粉丝离开虚拟战场，并立即获得{$ham}元的金钱。</span><br>
+<!--{/if}-->
+<!--{if (($lvl>=11)&&($rage>=30))}-->
+<input type="button" name="we" value="西方理论" onclick="$('command').value='we';postCmd('gamecmd','command.php');"><br>
+<span class="grey">系统的为你的粉丝灌输西方的先进理论，提高其25%生命上限，50点武器攻击和50点熟练度并为其恢复满生命和体力。</span><br>
+<!--{/if}-->

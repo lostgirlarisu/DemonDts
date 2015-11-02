@@ -1,0 +1,19 @@
+TXUPD Start Mode:2
+start running, state: UPGRADE_BEGIN 
+set current state: OWNUPDATE_DOING 
+set current state: OWNUPDATE_SUCCEED 
+Current User do not has admin privilege, it can't be updated
+set current state: NO_UPGRADE 
+[0219/230426:ERROR:resource_bundle.cc(393)] Failed to load C:\Program Files\Tencent\QQ\Bin\resource.pak
+Some features may not be available.
+[0219/230426:ERROR:network_change_notifier_win.cc(111)] WSALookupServiceBegin failed with: 8
+XIO:  fatal IO error 11 (资源暂时不可用) on X server ":0"
+      after 69 requests (69 known processed) with 2 events remaining.
+XIO:  fatal IO error 11 (资源暂时不可用) on X server ":0"
+      after 71 requests (71 known processed) with 1 events remaining.
+XIO:  fatal IO error 11 (资源暂时不可用) on X server ":0"
+      after 90 requests (90 known processed) with 2 events remaining.
+XIO:  fatal IO error 11 (资源暂时不可用) on X server ":0"
+      after 1331 requests (1331 known processed) with 1 events remaining.
+XIO:  fatal IO error 11 (资源暂时不可用) on X server ":0"
+      after 143 requests (143 known processed) with 1 events remaining.

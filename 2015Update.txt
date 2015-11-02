@@ -1,0 +1,148 @@
+涉及功能方面的改动
+151030
+\include\
+	news.func.php//增加召唤真书库娘的战况提示语
+\include\game\
+	item.func.php//增加召唤真书库娘的特殊道具【书库联结】
+
+
+151029
+\include\game\
+	item.func.php//调整成【高速成长】允许转为【偶像大师】（高速成长不能转铁血战士是因为铁血战士有附加射熟1/3固定伤害，偶像大师没有这种功能）;【偶像大师】和【铁血战士】改为不能互转;新增偶像大师改饰品用的【空白歌词卡】
+\include\
+	news.func.php//偶像大师的绝唱技能相关；增加了角色转成偶像大师时的战况提示语
+command.php//偶像大师的绝唱技能相关
+\templates\default\
+	command.htm//偶像大师的绝唱技能相关
+
+151026
+\include\game\
+	search.func.php//增加个测试用的影响遇敌率的饰品【测试用索敌装置】
+
+151021
+\include\game\
+	item.func.php//实装没有卵用的【破烂的日记】
+
+151016
+\include\
+	news.func.php//新增测试NPC登场消息
+\include\game\
+	combat.func.php//实装部分NPC米可的特判
+	item.func.php//实装召唤测试NPC用的【测试NPC召唤器】
+
+151014
+\include\game\
+	combat.func.php//实装部分NPC米可的特判
+	clubslct.func.php//偶像大师觉醒改为开场不可选
+
+151009
+\include\game\
+	item2.func.php//以特定称号进行游戏时用探测器能探测到GHost9类NPC
+
+151008
+\include\game\
+	achievement.func.php//【L.O.O.P】结局的成就
+\templates\default\
+	achievement_44.htm//【L.O.O.P】结局的成就
+	user_end_achievement.htm//【L.O.O.P】结局的成就
+
+151007
+\gamedata\cache\
+	resources_1.php//游戏上局状态描述新增了【L.O.O.P】结局
+\include\
+	system.func.php//[151007]把获取结局编号的命令的获取长度提升到两位数
+	news.func.php//新增11号结局相关的战况文字描述
+\include\game\
+	item.func.php//实装特殊道具【北大路的便笺】、【九老人的手记卷轴】、【九系统的重启方法】
+\templates\default\
+	end.htm//新增11号结局【LOOP】的结局剧情
+
+151006
+\gamedata\cache\
+	resources_1.php//调整Resource文件的结构，使得NPC台词的内容拆分了出去
+	chat_1.php//被拆分出来的部分
+
+151005
+\include\game\
+	item.func.php//实装特殊道具【霜雪之心】、修复特殊道具【恶魔晶状体】存在多个时使用一次会全部消失的BUG
+\gamedata\cache\
+	npc_1.php//调整NPC文件的结构，使得佣兵和深渊灾厄的介绍拆分了出去
+	mercenarynpc_1.php//被拆分出来的部分
+	
+151001
+\templates\default\
+	profile.htm//使玩家不能选择神闪姿态
+
+150930
+\gamedata\cache\
+	resources_1.php//增加神闪姿态，编号6
+\include\game\
+	song.inc.php//偶像大师的歌魂消耗减免效果不再受等级限制
+	attr.func.php//新增神闪姿态的数据
+	achievement.func.php//调整击破NPC亚莉丝成就的判断条件
+150929
+\include\game\
+	clubslct.func.php//增加偶像大师觉醒的初始化属性
+	clubskills.func.php//增加歌喉技能
+	item.func.php//调整觉醒剂的效果，修改使得时尚周刊刷新技能次数
+\templates\default\
+	sp_skpts.htm//增加歌喉技能
+
+
+150925
+\include\game\
+	song.inc.php//偶像大师唱歌消耗歌魂减半
+\templates\default\
+	battlecmd.htm//调整偶像大师技能按钮的显示条件
+\include\game\
+	combat.func.php//偶像大师技能大幅度调整
+
+150924
+\include\game\
+	achievement.func.php//调整黄金猎犬和月下美人的进化条件（注释位置是【evowep用check】）
+	battle.func.php//[u150924]追加歌魂参数的定义
+\templates\default\
+	battlecmd.htm//追加偶像大师觉醒的怒气技能安魂（finalsong）
+\include\
+	news.func.php//追加怒气技能安魂的关键字
+
+150923
+\templates\default\
+	npcinfohelp.htm//改良了NPC介绍的描述机制
+\include\game\
+	item.func.php//调整了【可疑的发信器】的功能，使得能几率召唤五十铃川
+
+150917
+\include\
+	system.func.php【function add_once_area($atime)】//不知道什么原因禁区后不会移动的NPC类型回档到了AC版默认数据，除15日修改的17号NPC类型；只好又修改了一次
+
+150915
+\include\
+	system.func.php【function add_once_area($atime)】//新增禁区后不会移动的NPC类型17深渊灾厄
+	news.func.php//新增深渊灾厄NPC登场消息和预定的登场消息
+\include\game\
+	item.func.php//实装召唤深渊灾厄NPC用的恶魔晶状体
+	item2.func.php//生命探测器能探测深渊灾厄NPC
+===============================================================
+\npchelp.php//新增深渊灾厄NPC的类型（未完成，不能正常显示）
+\templates\default\
+	npchelp.htm//新增深渊灾厄NPC的介绍描述
+
+150914
+//玩家自定义头像，本来是时空服特有功能
+\valid.php
+\user.php
+\include\
+	user.func.php
+===============================================================
+\command.php（偶像大师技能判定）
+
+150910
+\gamedata\cache\
+	resources_1.php（增加偶像大师称号，编号70）
+\include\
+	news.func.php//追加怒气技能战歌的关键字
+\include\game\
+	combat.func.php
+\templates\default\
+	battlecmd.htm//增加偶像大师怒气技能战歌（battlesong）

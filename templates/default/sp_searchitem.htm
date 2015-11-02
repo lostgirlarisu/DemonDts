@@ -1,0 +1,8 @@
+<input type="hidden" name="mode" value="gem_searchitem">
+<input type="hidden" id="command" name="command" value="searchitem">
+你发动了【洞察】！<br>
+指骨间的宝石闪烁了几下，像是在等待你的命令。<br>
+你要查找的道具是：<br>
+<input type="text" name="itmname" value=""><br>
+<input type="button" class="cmdbutton" name="submit" value="查找" onclick="postCmd('gamecmd','command.php');this.disabled=true;">
+<input type="button" class="cmdbutton" name="submit" value="放弃" onclick="$('command').value='back'; postCmd('gamecmd','command.php');this.disabled=true;">

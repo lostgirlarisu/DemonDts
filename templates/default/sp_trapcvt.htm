@@ -1,0 +1,28 @@
+<input type="hidden" name="mode" value="sp_trapcvt">
+<input type="hidden" id="command" name="command" value="trapcvt">
+恐怖份子称号可以将一个陷阱改造为等效果、1耐久、爆炸属性的爆系武器。<br><span class="yellow">但因恐怖份子没有受过正规训练，改造有30%的概率失败并导致陷阱在手中爆炸！</span><br><br>
+请选择你希望转换的陷阱：<br>
+<select id="trap" name="trap" value="back">
+<option value="back">返回<br>
+<!--{if $itms1 && (strpos($itmk1,'TO')!==false || strpos($itmk1,'TN')!==false)}-->
+<option value="1"><span class="yellow">{$itm1}</span>/{$itme1}/{$itms1}<br>
+<!--{/if}-->
+<!--{if $itms2 && (strpos($itmk2,'TO')!==false || strpos($itmk2,'TN')!==false)}-->
+<option value="2"><span class="yellow">{$itm2}</span>/{$itme2}/{$itms2}<br>
+<!--{/if}-->
+<!--{if $itms3 && (strpos($itmk3,'TO')!==false || strpos($itmk3,'TN')!==false)}-->
+<option value="3"><span class="yellow">{$itm3}</span>/{$itme3}/{$itms3}<br>
+<!--{/if}-->
+<!--{if $itms4 && (strpos($itmk4,'TO')!==false || strpos($itmk4,'TN')!==false)}-->
+<option value="4"><span class="yellow">{$itm4}</span>/{$itme4}/{$itms4}<br>
+<!--{/if}-->
+<!--{if $itms5 && (strpos($itmk5,'TO')!==false || strpos($itmk5,'TN')!==false)}-->
+<option value="5"><span class="yellow">{$itm5}</span>/{$itme5}/{$itms5}<br>
+<!--{/if}-->
+<!--{if $itms6 && (strpos($itmk6,'TO')!==false || strpos($itmk6,'TN')!==false)}-->
+<option value="6"><span class="yellow">{$itm6}</span>/{$itme6}/{$itms6}<br>
+<!--{/if}-->
+</select>
+<br><br>
+<input type="button" class="cmdbutton" name="submit" value="提交" onclick="postCmd('gamecmd','command.php');this.disabled=true;">
+<input type="button" class="cmdbutton" name="submit" value="返回" onclick="$('command').value='back'; postCmd('gamecmd','command.php');this.disabled=true;">
