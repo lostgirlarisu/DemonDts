@@ -2989,7 +2989,7 @@ if (($w_type==32)&&($w_name=='冰冻青蛙')){
 		if ($hp>$mhp) $hp=$mhp;
 }
 
-if ($w_name=='甲斐 山诚'){
+if (($w_name=='甲斐 山诚')&&($w_type)){
 	$event_dice=rand(1,100);
 	if($event_dice <=30){
 		global $wep,$wepk,$wepe,$weps,$wepsk;
@@ -3040,7 +3040,7 @@ if ($w_name=='甲斐 山诚'){
 	}
 }
 
-if ($w_name=='條原 乙妃'){
+if (($w_name=='條原 乙妃')&&($w_type)){
 	$event_dice=rand(1,100);
 	if($event_dice <=30){
 		$log .= "<span class=\"yellow\">“解构分析完成！来尝尝本小姐的最新研究成果！”條原的某种指令启动了周围隐藏的科技武器！</span><br>";
@@ -3056,7 +3056,7 @@ if ($w_name=='條原 乙妃'){
 	}
 }
 
-if ($w_name=='无聊'){
+if (($w_name=='无聊')&&($w_type)){
 	$event_dice=rand(1,100);
 	if($event_dice <=30){
 		$log .= "<span class=\"yellow\">“制空权已确保！立即对敌进行饱和空袭攻击！”无聊大手一挥作出了战斗指示！</span><br>";
@@ -3068,7 +3068,7 @@ if ($w_name=='无聊'){
 	}
 }
 
-if ($w_name=='数纳 步'){
+if (($w_name=='数纳 步')&&($w_type)){
 	//$log .= "<span class=\"yellow\">北大路抬起手，掌心朝向你，你感到一阵眩晕！</span><br>";
 	//$log .= "<span class=\"yellow\">回过神来，你发现你因为受到了超能力的影响，生命上限减少了！</span><br>";
 	$up=rand(1,4);
@@ -3084,7 +3084,7 @@ if ($w_name=='数纳 步'){
 	}
 }
 
-if ($w_name=='北大路 真'){
+if (($w_name=='北大路 真')&&($w_type)){
 	$log .= "<span class=\"yellow\">北大路抬起手，掌心朝向你，你感到一阵眩晕！</span><br>";
 	$log .= "<span class=\"yellow\">回过神来，你发现你因为受到了超能力的影响，生命上限减少了！</span><br>";
 		$de=rand(1,160);
@@ -3093,7 +3093,7 @@ if ($w_name=='北大路 真'){
 		if ($hp>$mhp) $hp=$mhp;
 }
 
-if ($w_name=='五十铃川 兼元'){
+if (($w_name=='五十铃川 兼元')&&($w_type)){
 	$log .= "<span class=\"yellow\">五十铃川身边的剑不可思议地飞舞着冲向你！</span><br>";
 		if($w_wep!='三日月宗近'){
 			$event_dice=rand(1,2);

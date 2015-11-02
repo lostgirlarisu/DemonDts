@@ -5,7 +5,7 @@
 \gamedata\cache\
 	resources_1.php//增加书库娘收录死法的描述
 \include\game\
-	combat.func.php//增加一系列书库娘的战斗特效
+	combat.func.php//增加一系列书库娘的战斗特效；修复了玩家取部分NPC的名字可以触发该NPC专有特技的BUG
 
 151030
 \include\
