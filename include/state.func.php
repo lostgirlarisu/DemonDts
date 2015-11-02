@@ -78,6 +78,8 @@ function death($death, $kname = '', $ktype = 0, $annex = '') {
 		$state = 46;
 	} elseif ($death == 'cursedeath'){
 		$state = 47;
+	} elseif ($death == 'wikicollect'){
+		$state = 60;
 	} else {
 		$state = 10;
 	}

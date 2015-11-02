@@ -1,4 +1,12 @@
 涉及功能方面的改动
+151102
+\include\
+	state.func.php//增加书库娘收录的死法（编号60）
+\gamedata\cache\
+	resources_1.php//增加书库娘收录死法的描述
+\include\game\
+	combat.func.php//增加一系列书库娘的战斗特效
+
 151030
 \include\
 	news.func.php//增加召唤真书库娘的战况提示语

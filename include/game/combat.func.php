@@ -3185,6 +3185,40 @@ if($w_wep=='无后座力迷你加特林'){
 		$log .= "<span class=\"yellow\">对方的武器似乎卡壳了，没有发挥出原本该有的性能！</span><br>";
 	}
 }
+
+if(($w_wep=='深渊百科全书真本') && ($w_name=='书库联结 书库娘') && ($w_type)){
+	$log .= "<span class=\"yellow\">书库娘手往前一推，散发光芒的百科全书朝向你快速翻动着书页！</span><br>
+		<span class=\"linen\">“这样的战斗可是超有价值的哦！展开吧！无限书库的写入程式！”</span><br>";
+	$rand_dice=rand(1,666);
+	if($rand_dice==333){
+	//死了
+					$log .= "<span class=\"yellow\">书库娘的百科全书散发的光芒把你整个人包覆了！</span><br>
+					<span class=\"linen\">“哦哦哦！竟然整个都收录啦！超Lucky～”</span><br>
+					<span class=\"yellow\">你被收录了！</span><br>";
+					$w_killnum ++;
+					include_once GAME_ROOT . './include/state.func.php';
+					death ( 'wikicollect',$w_name ,$w_type );
+					$log=$x_temp_log.$log;
+					return 0;
+	}else{
+		$rand_dice2=rand(1,100);
+		if($rand_dice2<=80){
+			$log .= "<span class=\"yellow\">书库娘的百科全书散发的光芒竟毫无预兆地聚焦到了你手持的武器上！</span><br>
+				<span class=\"linen\">“喵哈哈哈哈！收录到啦！我要赶紧试试效果！”</span><br>
+				<span class=\"yellow\">你的武器性质被书库娘收录了！</span><br>";
+			$w_wepk=$wepk;	$w_wepe=$wepe;	$w_wepsk=$wepsk;
+			if($weps==$nosta){
+				$w_weps=100;
+			}else{
+				$w_weps=$weps;
+			}
+		}else{
+			$log .= "<span class=\"yellow\">书库娘的百科全书散发的光芒往四周消散了。</span><br>
+				<span class=\"linen\">“呜喵！没收录到！不过不要紧，还有的是机会！”</span><br>";
+		}
+	}
+}
+
 if(($w_wep=='深水鱼弹-金鲤型')&&($w_type)&&(!$type)){
 	$log .= "<span class=\"yellow\">深水鱼弹在击中你的瞬间爆炸了！</span><br>";
 		$log .= "<span class=\"yellow\">鱼弹引发的爆炸使你的防具损坏了！</span><br>";
@@ -4971,6 +5005,7 @@ function get_dmg_punish($nm, $dmg, &$hp, $a_ky,$cl,$lv) {
 	if ($dmg >= 1000) {
 		global $log;
 		global $artk;//[u150925]偶像大师特判
+		global $w_art;//书库结界
 		if ($dmg < 2000) {
 			$hp_d = floor ( $hp / 2 );
 		} elseif ($dmg < 5000) {
@@ -4978,8 +5013,12 @@ function get_dmg_punish($nm, $dmg, &$hp, $a_ky,$cl,$lv) {
 		} else {
 			$hp_d = floor ( $hp * 4 / 5 );
 		}
-		if ((strpos ( $a_ky, 'H' ) != false)||(($cl==18)&&($lv>=3))||(($cl==70)&&($lv>=11)&&($artk=='ss'))) {
-			$hp_d = floor ( $hp_d / 10 );
+		if(($w_art!='深邃无限书库结界')&&($w_type)){
+			if ((strpos ( $a_ky, 'H' ) != false)||(($cl==18)&&($lv>=3))||(($cl==70)&&($lv>=11)&&($artk=='ss'))) {
+				$hp_d = floor ( $hp_d / 10 );
+			}
+		}else{
+			$log .= "<span class=\"yellow\">书库娘的{$w_art}使你无法抗衡反噬之理！</span><br>";			
 		}
 		if((($nm=='年兽（？）')||($nm=='埃尔兰卡'))&&($type!=0)){
 		//保险
