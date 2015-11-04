@@ -5014,10 +5014,16 @@ function get_dmg_punish($nm, $dmg, &$hp, $a_ky,$cl,$lv) {
 			$hp_d = floor ( $hp * 4 / 5 );
 		}
 		if ((strpos ( $a_ky, 'H' ) != false)||(($cl==18)&&($lv>=3))||(($cl==70)&&($lv>=11)&&($artk=='ss'))) {
-			if(($w_art!='深邃无限书库结界')&&($w_type)){
-				$hp_d = floor ( $hp_d / 10 );
-			}else{
-				$log .= "<span class=\"yellow\">书库娘的{$w_art}使你无法抗衡反噬之理！</span><br>";			
+			$hp_d = floor ( $hp_d / 10 );
+		}
+		if(($w_art=='深邃无限书库结界')&&($w_type)){
+			$log .= "<span class=\"yellow\">书库娘的{$w_art}使你无法抗衡反噬之理！</span><br>";
+			if ($dmg < 2000) {
+				$hp_d = floor ( $hp / 2 );
+			} elseif ($dmg < 5000) {
+				$hp_d = floor ( $hp * 2 / 3 );
+			} else {
+				$hp_d = floor ( $hp * 4 / 5 );
 			}
 		}
 		if((($nm=='年兽（？）')||($nm=='埃尔兰卡'))&&($type!=0)){

@@ -374,6 +374,7 @@ $anpcinfo = array
 			'artk' => 'A',	'arte' => 1000,	'arts' => 1000,	'artsk' => 'aH',
 			'itm1' => '游戏解除钥匙',
 			'itmk1' => 'Y',	'itme1' => 1,	'itms1' => 5,	'itmsk1' => '',
+			/*
 			'itm2' => '',
 			'itmk2' => '',	'itme2' => ,	'itms2' => ,	'itmsk2' => '',
 			'itm3' => '',
@@ -382,6 +383,7 @@ $anpcinfo = array
 			'itmk4' => '',	'itme4' => ,	'itms4' => ,	'itmsk4' => '',
 			'itm5' => '',
 			'itmk5' => '',	'itme5' => ,	'itms5' => ,	'itmsk5' => '',
+			*/
 			),
 		),
 	), 
